@@ -19,19 +19,17 @@ subscribe to updates by registering event handlers.
 **A snapshot of the database with one available receptionist and a new incoming call**
 ![Logo](assets/database.png)
 ---
-### Basic application flow
+**Frontend application flow (Receptionist's web client)**
 
-**Frontend (Receptionist's web client)**
-
-- Client logs in to Firebase and pushes an object of it's own details to **receptionists/\<id\>** JSON node.
-- Client registers an event handler for changes on **receptionists/\<id\>/messages**
+- Client logs in to Firebase and pushes an object of it's own details to **receptionists\/\<id\>** JSON node.
+- Client registers an event handler for changes on **receptionists\/\<id\>\/messages**
 - Client registers an event handler for **disconnect** event. The handler for this event removes 
-**receptionists/\<id\>** JSON node so that our backend is aware that the client has disconnected.
+**receptionists\/\<id\>** JSON node so that our backend is aware that the client has disconnected.
 ---
 
 ### Basic application flow
 
-**Backend (App Engine Java application)**
+**Backend application flow (App Engine Java application)**
 
 - Writes messages to **messages** JSON node of all **receptionists** JSON node.
 
