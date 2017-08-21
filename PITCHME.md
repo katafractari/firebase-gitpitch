@@ -16,5 +16,5 @@ You can think of a Firebase database as a single JSON object, like a Redux state
 Connected clients read and write from/to the database, but the most important aspect here is data updates. Clients
 subscribe to updates by registering event handlers.
 ---
-### A snapshot of the database with one available receptionist with a new incoming call:
+#### A snapshot of the database with one available receptionist with a new incoming call:
 ![Logo](assets/database.png)
