@@ -21,10 +21,10 @@ subscribe to updates by registering event handlers.
 ---
 **Frontend application flow (Receptionist's web client)**
 
-- Client logs in to Firebase and pushes an object of it's own details to **receptionists\/\<id\>** JSON node.
+- Client logs in to Firebase and pushes an object of it's own details to **receptionists/{id}>** JSON node.
 - Client registers an event handler for changes on **receptionists/{id}/messages**
 - Client registers an event handler for **disconnect** event. The handler for this event removes 
-**receptionists\/\<id\>** JSON node so that our backend is aware that the client has disconnected.
+**receptionists/{id}>** JSON node so that our backend is aware that the client has disconnected.
 ---
 **Backend application flow (App Engine Java application)**
 
